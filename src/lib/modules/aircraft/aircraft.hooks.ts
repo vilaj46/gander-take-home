@@ -21,9 +21,7 @@ const useGetAircrafts = () => {
   return useQuery({
     queryKey: queryKeys.all,
     queryFn: async () => {
-      const response = await axios.get<TAircraft[]>(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/api/aircraft`
-      )
+      const response = await axios.get<TAircraft[]>(`/api/aircraft`)
       return response.data
     },
   })
@@ -40,13 +38,10 @@ const usePatchAircraftStatus = () => {
       status: EAircraftStatus
       tailNumber: TAircraft["tail_number"]
     }) => {
-      const response = await axios.patch<TAircraft>(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/api/aircraft`,
-        {
-          tailNumber,
-          status,
-        }
-      )
+      const response = await axios.patch<TAircraft>(`/api/aircraft`, {
+        tailNumber,
+        status,
+      })
       return response.data
     },
     onSuccess: () => {
