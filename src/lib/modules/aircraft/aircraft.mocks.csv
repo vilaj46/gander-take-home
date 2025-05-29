@@ -1,0 +1,11 @@
+model,status,current_location
+Boeing 737,available,JFK
+Airbus A320,aog,LGA
+Bombardier CRJ900,maintenance,SWF
+Embraer E175,aog,JFK
+Boeing 757,available,HPN
+Airbus A220,maintenance,LGA
+Cessna Citation X,available,SWF
+Gulfstream G650,aog,JFK
+Dassault Falcon 2000,maintenance,HPN
+Boeing 787,available,LGA
